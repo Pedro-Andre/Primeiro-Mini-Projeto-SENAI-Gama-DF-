@@ -1,0 +1,223 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: #1d1d1d;
+}				  
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
+.header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	background-color: #1d1d1d;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+	max-width: 820px;
+	margin: 0 auto;
+	padding: 5px 0px;
+}
+
+.nav-list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-link {
+	color: white;
+	display: block;
+	padding: 5px 10px;
+	font-size: 20px;
+}
+
+.nav-link:hover {
+	color: #70e000;
+}
+
+.nav-link2 {
+	color: white;	
+}
+
+.nav-link2:hover {
+	color: #70e000;
+}
+.nav-list2 {
+	list-style: none;
+	align-items: center;
+	position: fixed;
+	color: white;
+	font-size: 20px;
+	display: block;
+	padding: 15px 10px;
+	background-color: #1d1d1d;
+}
+
+.nav-item2 {
+	border-bottom: 1px solid white;
+	border-width: 30%;
+}
+
+.nav-item2:hover {
+	color: #70e000;
+}
+/* ---- */
+
+/* RODAPE */
+.rodape {
+	width: 100%;
+	height: 400px;
+	background: #70e000;
+}
+
+.logo-rodape {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#insta {
+	font-size: 40px;
+	margin-left: 1050px;
+	display: inline-block;
+	justify-content: space-between;
+}
+
+#zap {
+	font-size: 40px;
+	margin-left: 10px;
+	display: inline-block;
+	justify-content: space-between;
+}
+
+#social-logo {
+	margin-top: -400px;
+	font-size: 40px;
+	display: inline-block;
+	justify-content: space-between;	
+	color: black;
+}
+
+h6 {
+	font-size: 20px;
+	font-weight: 500;
+	top: 150px;
+	left: 30px;
+}
+
+.telefone {
+	top: 200px;
+}
+
+.nomecontato {
+	top: 250px;
+}
+
+footer {
+	text-align: center;
+	color: white;
+	font-weight: 500;
+}
+
+dt, dd {
+	text-align: center;
+	color: white;
+	font-weight: 500;
+}
+
+/*FOTO SOBRE*/
+.foto-sobre {
+	width: 800px;
+	height: 500px;
+}
+
+.ceo1 {
+	margin-left: 90px;
+	width: 300px;
+	height: 450px;
+}
+
+.ceo2 {
+	width: 300px;
+	height: 450px;
+	margin-left: 150px;
+}
+/* __  */
+
+.quem {
+	text-align: center;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+.historia {
+	font-size: 20px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	text-align: justify;
+	margin-left: 250px;
+	margin-right: 250px;
+}
+
+.clientes {
+	text-align: center;
+	font-weight: 300;
+	color: #ffffff60;
+}
+
+.ceo-div {
+	display: flex;
+}
+
+.ceo1-nome {
+	font-family: 'Poppins',sans-serif;
+	color: white;
+	font-size: 25px;
+	margin-left: 100px;
+
+}
+
+.ceo1-text {
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	margin-top: 60px;
+	margin-left: -180px;
+}
+
+.ceo-div-text {
+	display: flex;
+	margin-left: 150px;
+}
+
+.ceo-div2 {
+	display: flex;
+}
+
+.ceo2-nome {
+	font-family: 'Poppins',sans-serif;
+	color: white;
+	font-size: 25px;	
+	margin-left: 20px;
+}
+
+.ceo2-text {
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	margin-top: 60px;
+	margin-left: -180px;
+
+}
