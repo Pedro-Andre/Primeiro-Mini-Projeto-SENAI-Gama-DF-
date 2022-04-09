@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabela</title>
+
+	<style>
+		/* HEADER */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			width: 100%;
+			height: 100vh;
+			background: #1d1d1d;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+		.header {
+			width: 100%;
+			height: 80px;
+			position: fixed;
+			top: 0;
+			z-index: 999;
+			background-color: #1d1d1d;
+			backdrop-filter: blur(20px);
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+		}
+
+		.header-container {
+			max-width: 820px;
+			margin: 0 auto;
+			padding: 5px 0px;
+		}
+
+		.nav-list {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.nav-link {
+			color: white;
+			display: block;
+			padding: 5px 10px;
+			font-size: 20px;
+		}
+
+		.nav-link:hover {
+			color: #70e000;
+		}
+
+		.nav-link2 {
+			color: white;
+		}
+
+		.nav-link2:hover {
+			color: #70e000;
+		}
+
+		.nav-list2 {
+			list-style: none;
+			align-items: center;
+			position: fixed;
+			color: white;
+			font-size: 20px;
+			display: block;
+			padding: 15px 10px;
+			background-color: #1d1d1d;
+		}
+
+		.nav-item2 {
+			border-bottom: 1px solid white;
+			border-width: 30%;
+		}
+
+		.nav-item2:hover {
+			color: #70e000;
+		}
+
+		h1 {
+			color: #70e000;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		td {
+			color: white;
+			font-size: 30px;
+			padding: 5px 50px;
+
+		}
+
+		table {
+			margin: auto;
+			text-align: center;
+			table-layout: fixed;
+		}
+
+		td,
+		tr {
+			border: 0.5px solid #1d1d1d;
+			border-collapse: collapse;
+		}
+
+		.um {
+			background: #ade8f4;
+		}
+
+		.dois {
+			background: #90e0ef;
+		}
+
+		.tres {
+			background: #48cae4;
+		}
+
+		.quatro {
+			background: #00b4d8;
+		}
+
+		.cinco {
+			background: #0096c7;
+		}
+
+		.seis {
+			background: #0077b6;
+		}
+
+		.sete {
+			background: #023e8a;
+		}
+
+		.oito {
+			background: #3a0ca3;
+		}
+
+		.nove {
+			background: #2a9d8f;
+		}
+
+		.dez {
+			background: #f4a261;
+		}
+
+		.onze {
+			background: #e76f51;
+		}
+
+		.doze {
+			background: #f72585;
+		}
+
+		.treze {
+			background: #b5179e;
+		}
+
+		.catorze {
+			background: #606c38;
+		}
+
+		.quinze {
+			background: #e9c46a;
+		}
+
+		.dezesseis {
+			background: #ddbea9;
+		}
+
+		.dezessete {
+			background: #cb997e;
+		}
+
+		.dezoito {
+			background: #a5a58d;
+		}
+
+		.dezenove {
+			background: #b7b7a4;
+		}
+
+		.vinte {
+			background: #6b705c;
+		}
+
+		.vinteum {
+			background: #0a9396;
+		}
+
+		.vintedois {
+			background: #023047;
+		}
+
+		.vintetres {
+			background: #9c6644;
+		}
+
+		.vintequatro {
+			background: #e63946;
+		}
+
+		.vintecinco {
+			background: #ffba08;
+		}
+
+		.vinteseis {
+			background: #d00000;
+		}
+
+		.vintesete {
+			background: #9d0208;
+		}
+
+		.vinteoito {
+			background: #e85d04;
+		}
+
+		.vintenove {
+			background: #370617;
+		}
+
+		.trinta {
+			background: #d9ed92;
+		}
+
+		.trintaum {
+			background: #faedcd;
+		}
+
+		.trintadois {
+			background: #b5e48c;
+		}
+
+		.trintatres {
+			background: #99d98c;
+		}
+
+		.trintaquatro {
+			background: #52b69a;
+		}
+
+		.trintacinco {
+			background: #14213d;
+		}
+
+		.trintaseis {
+			background: #e5e5e5;
+		}
+
+		.trintasete {
+			background: #9a031e;
+		}
+
+		.trintaoito {
+			background: #0f4c5c;
+		}
+
+		.trintanove {
+			background: #5f0f40;
+		}
+
+		.quarenta {
+			background: #a0c4ff;
+		}
+
+		.quarentaum {
+			background: #ffc6ff;
+		}
+
+		.quarentadois {
+			background: #bdb2ff;
+		}
+
+		.quarentatres {
+			background: #ffd6a5;
+		}
+
+		.quarentaquatro {
+			background: #e07a5f;
+		}
+
+		.quarentacinco {
+			background: #3d405b;
+		}
+
+		.quarentaseis {
+			background: #4a4e69;
+		}
+
+		.quarentasete {
+			background: #caffbf;
+		}
+
+		.quarentaoito {
+			background: #8338ec;
+		}
+
+		.quarentanove {
+			background: #fff0f3;
+		}
+
+		.cinquenta {
+			background: #ff4d6d;
+		}
+
+		.cinquentaum {
+			background: #6930c3;
+		}
+
+		.cinquentadois {
+			background: #c9184a;
+		}
+
+		.cinquentatres {
+			background: #80ffdb;
+		}
+
+		.cinquentaquatro {
+			background: #7400b8;
+		}
+
+		.cinquentacinco {
+			background: #90be6d;
+		}
+
+		.cinquentaseis {
+			background: #72efdd;
+		}
+
+		.cinquentasete {
+			background: #590d22;
+		}
+
+		.cinquentaoito {
+			background: #f9c74f;
+		}
+
+		.cinquentanove {
+			background: #577590;
+		}
+
+		.sessenta {
+			background: #dee2e6;
+		}
+
+		.sessentaum {
+			background: #0466c8;
+		}
+
+		.sessentadois {
+			background: #979dac;
+		}
+
+		.sessentatres {
+			background: #06d6a0;
+		}
+
+		.sessentaquatro {
+			background: #ffcbf2;
+		}
+
+		.sessentacinco {
+			background: #33415c;
+		}
+
+		.sessentaseis {
+			background: #007200;
+		}
+
+		.sessentasete {
+			background: #001233;
+		}
+
+		.sessentaoito {
+			background: #edc4b3;
+		}
+
+		.sessentanove {
+			background: #deaaff;
+		}
+
+		.setenta {
+			background: #c8e7ff;
+		}
+
+		.setentaum {
+			background: #ffff3f;
+		}
+
+		.setentadois {
+			background: #5a189a;
+		}
+
+		.setentatres {
+			background: #240046;
+		}
+
+		.setentaquatro {
+			background: #403d39;
+		}
+
+		.setentacinco {
+			background: #55a630;
+		}
+	</style>
+
+	<!--ÍCONES-->
+	<script src="https://kit.fontawesome.com/153ac2f413.js" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="	stylesheet">
+</head>
+
+<!-- SCRIPT DA BARRA DE NAVEGAÇÃO -->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".nav-list li ul").hide();
+		$(".nav-list li").hover(
+			function () { $(this).children("ul").show(); },
+			function () { $(this).children("ul").hide(); }
+		);
+	});
+</script>
+
+<body>
+	<!-- BARRA DE NAVEGAÇÃO -->
+	<header class="header">
+		<div class="header-container">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a href="../index.html" class="nav-logo">
+						<img src="../imagens/logo1.png" style="width: 80px;">
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="../index.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="../bicicletas/bicicletas.html" class="nav-link">Biciletas</a>
+					<ul class="nav-list2">
+						<li class="nav-item2">
+							<a href="../bicicletas/esportiva.html" class="nav-link2">Esportiva
+						</li></a>
+						<li class="nav-item2">
+							<a href="../bicicletas/infantil.html" class="nav-link2">Infantil
+						</li></a>
+						<li class="nav-item2">
+							<a href="../bicicletas/bmx.html" class="nav-link2">BMX
+						</li></a>
+						<li class="nav-item2">
+							<a href="../bicicletas/corrida.html" class="nav-link2">Corrida
+						</li></a>
+						<li class="nav-item2">
+							<a href="../bicicletas/urbana.html" class="nav-link2">Urbana
+						</li></a>
+						<li class="nav-item2">
+							<a href="../bicicletas/dobravel.html" class="nav-link2">Dobrável
+						</li></a>
+						<li class="nav-item2">
+							<a href="../bicicletas/mtb.html" class="nav-link2">Mountain Bike (MTB)
+						</li></a>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="contato.html" class="nav-link">Contato</a>
+				</li>
+				<li class="nav-item">
+					<a href="tabela.html" class="nav-link">Tabela</a>
+				</li>
+				<li class="nav-item">
+					<a href="sobre.html" class="nav-link">Sobre</a>
+					<ul class="nav-list2">
+						<li class="nav-item2"><a href="briefing.html" class="nav-link2">Briefing</a>
+						</li>
+						<li class="nav-item2"><a href="sobre.html" class="nav-link2">Quem somos</a></li>
+						<li class="nav-item2"><a href="textos.html" class="nav-link2">Textos</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="patrocinadores.html" class="nav-link">Nossos parceiros</a>
+				</li>
+				<li class="nav-item">
+					<a href="user.html" class="nav-icon">
+						<img src="../imagens/icon2.svg" style="width: 30px;">
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="carrinho.html" class="nav-icon">
+						<img src="../imagens/icon1.svg" style="width: 30px;">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<body>
+		<h1 align="center">Tabela</h1>
+		<center>
+			<hr width="45%" size="3" color="#70e000">
+		</center>
+
+		<marquee behavior="alternate" width="90%" scrollamount="35" direction="left">
+			<marquee behavior="alternate"></marquee>
+			<table>
+				<tr>
+					<td class="um">.</td>
+					<td colspan="4" class="cinco">.</td>
+				</tr>
+				<tr>
+					<td class="seis">.</td>
+					<td class="sete">.</td>
+					<td class="oito">.</td>
+					<td class="nove">.</td>
+					<td class="dez">.</td>
+				</tr>
+				<tr>
+					<td rowspan="4" class="onze">.</td>
+					<td class="doze">.</td>
+					<td class="treze">.</td>
+					<td class="catorze">.</td>
+					<td class="quinze">.</td>
+				</tr>
+				<tr>
+					<td class="dezesseis">.</td>
+					<td class="dezessete">.</td>
+					<td class="dezoito">.</td>
+					<td class="dezenove">.</td>
+				</tr>
+				<tr>
+					<td class="vintedois">.</td>
+					<td class="vintetres">.</td>
+					<td class="vintequatro">.</td>
+					<td class="vintecinco">.</td>
+				</tr>
+				<tr>
+					<td class="vinteseis">.</td>
+					<td class="vintesete">.</td>
+					<td class="vinteoito">.</td>
+					<td class="vintenove">.</td>
+				</tr>
+				<tr>
+					<td class="trintaum">.</td>
+					<td class="trintadois">.</td>
+					<td class="trintatres">.</td>
+					<td class="trintaquatro">.</td>
+					<td class="trintacinco">.</td>
+				</tr>
+				<tr>
+					<td class="trintaseis">.</td>
+					<td class="trintasete">.</td>
+					<td class="trintaoito">.</td>
+					<td class="trintanove">.</td>
+					<td class="quarenta">.</td>
+				</tr>
+				<tr>
+					<td class="quarentaum">.</td>
+					<td class="quarentadois">.</td>
+					<td class="quarentatres">.</td>
+					<td class="quarentaquatro">.</td>
+					<td class="quarentacinco">.</td>
+				</tr>
+				<td class="quarentaseis">.</td>
+				<td class="quarentasete">.</td>
+				<td class="quarentaoito">.</td>
+				<td class="quarentanove">.</td>
+				<td class="cinquenta">.</td>
+				</tr>
+				<tr>
+					<td class="cinquentaum">.</td>
+					<td class="cinquentadois">.</td>
+					<td class="cinquentatres">.</td>
+					<td rowspan="3" class="cinquentaquatro">.</td>
+					<td class="cinquentacinco">.</td>
+				</tr>
+				<tr>
+					<td class="cinquentaseis">.</td>
+					<td class="cinquentasete">.</td>
+					<td class="cinquentaoito">.</td>
+					<td class="cinquentanove">.</td>
+				</tr>
+				<tr>
+					<td class="sessentadois">.</td>
+					<td class="sessentatres">.</td>
+					<td class="sessentaquatro">.</td>
+					<td class="sessentacinco">.</td>
+				</tr>
+				<tr>
+					<td class="sessentaseis">.</td>
+					<td class="sessentasete">.</td>
+					<td class="sessentaoito">.</td>
+					<td class="sessentanove">.</td>
+					<td class="setenta">.</td>
+				</tr>
+				<tr>
+					<td class="setentaum">.</td>
+					<td class="setentadois">.</td>
+					<td class="setentatres">.</td>
+					<td class="setentaquatro">.</td>
+					<td class="setentacinco">.</td>
+				</tr>
+			</table>
+			</marque>
+	</body>
+
+</html>

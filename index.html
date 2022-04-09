@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soft Byke</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="	stylesheet">
+
+</head>
+<!--ÍCONES-->
+<script src="https://kit.fontawesome.com/153ac2f413.js" crossorigin="anonymous"></script>
+
+<!-- SCRIPT DA BARRA DE NAVEGAÇÃO -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".nav-list li ul").hide();
+		$(".nav-list li").hover(
+			function () { $(this).children("ul").show(); },
+			function () { $(this).children("ul").hide(); }
+		);
+	});
+</script>
+
+<!-- SCRIPT PARA MUDANÇA AUTOMÁTICA DO BANNER -->
+<script type="text/javascript">
+	var counter = 1;
+	setInterval(function () {
+		document.getElementById('radio' + counter).checked = true;
+		counter++;
+		if (counter > 3) {
+			counter = 1;
+		}
+	}, 4000);
+</script>
+
+<body>
+	<!-- BARRA DE NAVEGAÇÃO -->
+	<header class="header">
+		<div class="header-container">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a href="index.html" class="nav-logo">
+						<img src="imagens/logo1.png" style="width: 80px;">
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="bicicletas/bicicletas.html" class="nav-link">Biciletas</a>
+					<ul class="nav-list2">
+						<li class="nav-item2">
+							<a href="bicicletas/esportiva.html" class="nav-link2">Esportiva
+						</li></a>
+						<li class="nav-item2">
+							<a href="bicicletas/infantil.html" class="nav-link2">Infantil
+						</li></a>
+						<li class="nav-item2">
+							<a href="bicicletas/bmx.html" class="nav-link2">BMX
+						</li></a>
+						<li class="nav-item2">
+							<a href="bicicletas/corrida.html" class="nav-link2">Corrida
+						</li></a>
+						<li class="nav-item2">
+							<a href="bicicletas/urbana.html" class="nav-link2">Urbana
+						</li></a>
+						<li class="nav-item2">
+							<a href="bicicletas/dobravel.html" class="nav-link2">Dobrável
+						</li></a>
+						<li class="nav-item2">
+							<a href="bicicletas/mtb.html" class="nav-link2">Mountain Bike (MTB)
+						</li></a>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="pages/contato.html" class="nav-link">Contato</a>
+				</li>
+				<li class="nav-item">
+					<a href="pages/tabela.html" class="nav-link">Tabela</a>
+				</li>
+				<li class="nav-item">
+					<a href="pages/sobre.html" class="nav-link">Sobre</a>
+					<ul class="nav-list2">
+						<li class="nav-item2"><a href="pages/briefing.html" class="nav-link2">Briefing</a>
+						</li>
+						<li class="nav-item2"><a href="pages/sobre.html" class="nav-link2">Quem somos</a></li>
+						<li class="nav-item2"><a href="pages/textos.html" class="nav-link2">Textos</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="pages/patrocinadores.html" class="nav-link">Nossos parceiros</a>
+				</li>
+				<li class="nav-item">
+					<a href="pages/user.html" class="nav-icon">
+						<img src="imagens/icon2.svg" style="width: 30px;">
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="pages/carrinho.html" class="nav-icon">
+						<img src="imagens/icon1.svg" style="width: 30px;">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<br>
+
+
+	<!-- BANNER (SLIDER) -->
+	<div class="slider">
+		<div class="slides">
+			<!-- radios buttons start-->
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+			<!-- radios buttons end-->
+			<!-- slide images start-->
+			<div class="slide first">
+				<div class="banner-text">
+					<h1 class="banner-tet"></h1>
+					<img src="imagens/banner/banner3.jpg" alt="">
+				</div>
+			</div>
+			<div class="slide">
+				<img src="imagens/banner/banner2.jpg" alt="">
+			</div>
+			<div class="slide">
+				<img src="imagens/banner/banner1.jpg" alt="">
+			</div>
+			<!-- slide images end-->
+			<!-- auto navigation start-->
+			<div class="navigation-auto">
+				<div class="auto-btn1"></div>
+				<div class="auto-btn2"></div>
+				<div class="auto-btn3"></div>
+			</div>
+			<!-- auto navigation end-->
+		</div>
+		<!--manual navigation start-->
+		<div class="navigation-manual">
+			<label for="radio1" class="manual-btn1"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn3"></label>
+		</div>
+		<!--manual navigation end-->
+	</div>
+	<!-- image slider end-->
+
+
+
+	<!-- CARDS -->
+	<div class="destaque">
+		<center>
+			<h2>Mais Vendidas</h2>
+		</center>
+	</div>
+	<div class="container">
+		<div class="card">
+			<div class="bike-img"><img src="imagens/mountain/mtb9.png"></div>
+			<h3>Highball C (Sram NX Eagle)</h3>
+			<p>Tipo: mountain bike (mtb)</p>
+			<h4 class="preço">Preço: R$ 7.790,00</h4>
+			<h5 id="parcela">até 10x de R$ 779,00 sem juros ou R$ 7.400,50 via boleto</h5>
+			<a href="#" id="vermais">Ver mais</a>
+		</div>
+		<div class="card">
+			<div class="bike-img"><img src="imagens/bikes/dobravel/dobra3.png"></div>
+			<h3>Dahon Vybe C7 Speed</h3>
+			<p>Tipo: dobrável</p>
+			<h4 class="preço">Preço: R$ 3.900,00</h4>
+			<h5 id="parcela">até 10x de R$ 390,00 sem juros</h5>
+			<a href="#" id="vermais">Ver mais</a>
+		</div>
+		<div class="card">
+			<div class="bike-img"><img src="imagens/bikes/urbana/urbana1.png"></div>
+			<h3>Women's Beach Cruiser Bike 26" Perfect Fit</h3>
+			<p>Tipo: urbana</p>
+			<h4 class="preço">Preço: R$ 1.577,94</h4>
+			<h5 id="parcela">até 10x de R$ 157,79 sem juros ou R$ 1.500,00 via boleto</h5>
+			<a href="#" id="vermais">Ver mais</a>
+		</div>
+	</div>
+	<br>
+	<br>
+	<!--PUBLICIDADE-->
+	<div class="publicidade">
+		<p class="publi-text">PUBLICIDADE</p>
+		<br>
+		<center><a class="link-publi" href="https://www.netshoes.com.br/" target="_blank">
+				<img src="imagens/publi/publi1.jpg" id="publi-image"></a>
+			<a class="link-publi" href="https://www.casasbahia.com.br/" target="_blank">
+				<img src="imagens/publi/publi2.jpg" id="publi-image"></a>
+		</center>
+	</div>
+	<!-- __ -->
+
+	<!-- CARDS -->
+	<div class="destaque2">
+		<center>
+			<h2>Infantis</h2>
+		</center>
+	</div>
+	<div class="container">
+		<div class="card">
+			<div class="bike-img"><img src="imagens/bikes/infantil/infantil1.png"></div>
+			<h3>Bicicleta Infantil Aro 16</h3>
+			<p>Tipo: infantil</p>
+			<h4 class="preço">Preço: R$ 619,00</h4>
+			<h5 id="parcela">até 10x de R$ 61,90 sem juros ou R$ 575,67 via boleto</h5>
+			<a href="#" id="vermais">Ver mais</a>
+		</div>
+		<div class="card">
+			<div class="bike-img"><img src="imagens/bikes/infantil/infantil3.png"></div>
+			<h3>Bicicleta Infantil Verden Breeze</h3>
+			<p>Tipo: infantil</p>
+			<h4 class="preço">Preço: R$ 699,99</h4>
+			<h5 id="parcela">até 10x de R$ 69,99 sem juros</h5>
+			<a href="#" id="vermais">Ver mais</a>
+		</div>
+		<div class="card">
+			<div class="bike-img"><img src="imagens/bikes/infantil/infantil2.png"></div>
+			<h3>Bicicleta Infantil Aro 16 </h3>
+			<p>Tipo: infantil</p>
+			<h4 class="preço">Preço: R$ 619,00</h4>
+			<h5 id="parcela">até 10x de R$ 61,90 sem juros ou R$ 575,67 via boleto</h5>
+			<a href="#" id="vermais">Ver mais</a>
+		</div>
+	</div>
+	<!-- __ -->
+	<br>
+	<br>
+	<!--PUBLICIDADE-->
+	<div class="publicidade">
+		<p class="publi-text2">PUBLICIDADE</p>
+		<br>
+		<center><a class="link-publi"
+				href="https://www.centauro.com.br/?awc=17806_1635632440_9dd94b247f5cb2eaab12338e7ed2d5a7&utm_source=awin&utm_medium=892503_email&utm_campaign=parcerias_zanox_2016_09casual&origem=Zanox&af_installpostback=false&af_force_deeplink=true&cks=17806_1635632440_9dd94b247f5cb2eaab12338e7ed2d5a7&redirect=true&pid=affiliatewindow_int&is_retargeting=true&af_click_lookback=1d&af_media_type=web&af_reengagement_window=7d&af_siteid=892503&af_inactivity_window=0d&c=892503"
+				target="_blank">
+				<img src="imagens/publi/publi3.jpg" id="publi-image"></a>
+			<a class="link-publi" href="https://www.americanas.com.br/" target="_blank">
+				<img src="imagens/publi/publi4.jpg" id="publi-image"></a>
+		</center>
+	</div>
+	<!-- __ -->
+	<br>
+	<br>
+	<!-- CATEGORIAS -->
+	<center>
+		<h2>Escolha o tipo da sua bicicleta</h2>
+	</center>
+
+	<br>
+	<div class="categorias">
+		<ol class="cat-list">
+			<li class="cat-item"><a href="esportiva.html" class="nav-link2">Esportiva</li></a>
+			<li class="cat-item"><a href="infantil.html" class="nav-link2">Infantil</li>
+			<li class="cat-item"><a href="bmx.html" class="nav-link2">BMX</li>
+			<li class="cat-item"><a href="corrida.html" class="nav-link2">Corrida</li>
+			<li class="cat-item"><a href="urbana.html" class="nav-link2">Urbana</li>
+			<li class="cat-item"><a href="dobravel.html" class="nav-link2">Dobrável</li>
+			<li class="cat-item"><a href="mtb.html" class="nav-link2">Mountain Bke (MTB)</li>
+		</ol>
+	</div>
+	<!-- __ -->
+	<br>
+	<br>
+	<center>
+		<hr size="3" width="60%" color="#70e000">
+	</center>
+	<br>
+	<br>
+	<!-- RODAPÉ -->
+	<div class="rodape">
+		<a href="" class="nav-logo-rodape">
+			<img src="imagens/logo2.png" style="width: 80px;" class="logo-rodape">
+		</a>
+		<h6><b>E-mail:</b> softbike.contato@gmail.com</h6>
+		<br>
+		<h6 class="telefone"><b>Telefone:</b> (61) 7667-9098</h6>
+		<br>
+		<h6 class="nomecontato"><b>Nome:</b> Soft Bike support</h6>
+
+		<a href="" id="social-logo"><i class="fab fa-instagram" id="insta"></i></a>
+		<a href="" id="social-logo"><i class="fab fa-whatsapp" id="zap"></i></a>
+	</div>
+
+
+	<footer>PEDRO ANDRÉ NUNES VIANA
+		<dt>Curso - Desenvolvimento Front-End</dt><br>
+		<dd>SENAI - Serviço Nacional de Aprendizagem Industrial</dd><br>
+	</footer>
+</body>
+
+</html>
